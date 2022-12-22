@@ -1,0 +1,8 @@
+<p>searchbar works!</p>
+<form [formGroup]="searchFormGroup" (ngSubmit)="searchSubmit()">
+    <input type="text" name="searchText" formControlName="searchText">
+    <button type="submit" [disabled]="searchFormGroup.invalid">Search</button>
+</form>
+<div *ngFor="let book of result">
+    <app-book-card [book]="book"></app-book-card>
+</div>
