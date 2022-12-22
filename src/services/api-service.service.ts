@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiServiceService {
-  private rootUrl: string = "http://openlibrary.org/search.json?"
+  private rootUrl: string = "https://openlibrary.org/search.json?"
 
   private result : BehaviorSubject<any> = new BehaviorSubject<any>({});
   currentResult = this.result.asObservable();
